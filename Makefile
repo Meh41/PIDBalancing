@@ -1,7 +1,9 @@
 PROJECT = drone
+ARCH = atmega328p
+F_CPU = 16000000UL
 
 CC = avr-gcc
-CCFLAGS = -mmcu=atmega328p -DF_CPU=16000000UL
+CCFLAGS = -mmcu=$(ARCH) -DF_CPU=$(F_CPU)
 OBJCOPY = avr-objcopy
 
 SRC = \
@@ -21,7 +23,7 @@ $(PROJECT).elf: $(OBJS)
 	$(CC) $(CCFLAGS) -o $@ -c $<
 
 flash: $(PROJECT).hex
-	avrdude -p atmega328p -c usbasp -e -U flash:w:$(PROJECT).hex:i
+	avrdude -p $(ARCH) -c usbasp -e -U flash:w:$(PROJECT).hex:i
 
 install: flash
 
