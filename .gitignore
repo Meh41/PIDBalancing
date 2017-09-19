@@ -1,0 +1,8 @@
+#Binary
+*.o
+*.elf
+*.hex
+
+#KDevelop
+.kdev4/
+*.kdev4
