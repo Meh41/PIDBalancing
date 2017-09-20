@@ -1,4 +1,4 @@
-PROJECT = drone
+PROJECT = pidbalancer
 ARCH = atmega328p
 F_CPU = 16000000UL
 
@@ -7,7 +7,8 @@ CCFLAGS = -mmcu=$(ARCH) -DF_CPU=$(F_CPU)
 OBJCOPY = avr-objcopy
 
 SRC = \
-	main.c
+	main.c \
+	uart.c
 
 OBJS = $(SRC:.c=.o)
 
