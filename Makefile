@@ -8,7 +8,9 @@ OBJCOPY = avr-objcopy
 
 SRC = \
 	main.c \
-	uart.c
+	uart.c \
+	i2c.c \
+	mpu6050.c
 
 OBJS = $(SRC:.c=.o)
 
@@ -24,7 +26,8 @@ $(PROJECT).elf: $(OBJS)
 	$(CC) $(CCFLAGS) -o $@ -c $<
 
 flash: $(PROJECT).hex
-	avrdude -p $(ARCH) -c usbasp -e -U flash:w:$(PROJECT).hex:i
+	#avrdude -p $(ARCH) -c usbasp -e -U flash:w:$(PROJECT).hex:i
+	avrdude -v -p $(ARCH) -c arduino -P /dev/ttyUSB0 -b 57600 -D -U flash:w:$(PROJECT).hex:i
 
 install: flash
 

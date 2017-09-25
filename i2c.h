@@ -1,18 +1,18 @@
 #ifndef _I2C_H_
 #define _I2C_H_
 
-#include <stdint.h>
-
 #define I2C_WRITE       0x00
 #define I2C_READ        0x01
+
+#include <stdint.h>
 
 /**
  * @brief
  *  Initialize TWI
  *
- * @param twbr - Value for TWBR register
+ * @param frequency - Frequency of I2C
  */
-void I2C_init(uint32_t twbr);
+void I2C_init(uint32_t frequency);
 
 /**
  * @brief
