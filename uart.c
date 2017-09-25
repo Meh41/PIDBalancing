@@ -46,3 +46,27 @@ void UART_putuint(uint64_t number)
     decimals[i] = '\0';
     UART_putstr(decimals);
 }
+
+void UART_putint(int64_t number)
+{
+    uint8_t i = 0;
+    char decimals[sizeof(number) + 3];
+
+    if(number == 0)
+        decimals[i++] = '0';
+
+    if(number < 0)
+    {
+        decimals[i++] = '-';
+        number *= -1;
+    }
+
+    while(number > 0)
+    {
+        decimals[i++] = (number % 10) + '0';
+        number /= 10;
+    }
+    decimals[i++] = '\n';
+    decimals[i] = '\0';
+    UART_putstr(decimals);
+}

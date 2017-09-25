@@ -35,4 +35,12 @@ void UART_putstr(const char *str);
  */
 void UART_putuint(uint64_t number);
 
+/**
+ * @brief
+ *  Send signed 64bit integer
+ *
+ * @param number - Integer to be sent
+ */
+void UART_putint(int64_t number);
+
 #endif // _UART_H_
