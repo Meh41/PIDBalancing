@@ -1,0 +1,109 @@
+\hypertarget{uart_8h}{}\section{uart.\+h File Reference}
+\label{uart_8h}\index{uart.\+h@{uart.\+h}}
+
+
+U\+A\+R\+T Communication Module.  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{uart_8h_a13c465164f0c2216218d7da0258e48d9}{U\+A\+R\+T\+\_\+init} (int32\+\_\+t baud)
+\begin{DoxyCompactList}\small\item\em Init U\+A\+R\+T communication. \end{DoxyCompactList}\item 
+void \hyperlink{uart_8h_ad504ca668c364504559276510be89804}{U\+A\+R\+T\+\_\+putchar} (char ch)
+\begin{DoxyCompactList}\small\item\em Send character. \end{DoxyCompactList}\item 
+void \hyperlink{uart_8h_ac1f901fbcca65801964bd814a8798149}{U\+A\+R\+T\+\_\+putstr} (const char $\ast$str)
+\begin{DoxyCompactList}\small\item\em Send string. \end{DoxyCompactList}\item 
+void \hyperlink{uart_8h_a516bf0ade6009f72c9788e046120a03e}{U\+A\+R\+T\+\_\+putuint} (uint64\+\_\+t number)
+\begin{DoxyCompactList}\small\item\em Send unsigned 64bit integer. \end{DoxyCompactList}\item 
+void \hyperlink{uart_8h_a08642dd9033ce2393f734fc7d30cfc42}{U\+A\+R\+T\+\_\+putint} (int64\+\_\+t number)
+\begin{DoxyCompactList}\small\item\em Send signed 64bit integer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+U\+A\+R\+T Communication Module. 
+
+
+
+\subsection{Function Documentation}
+\hypertarget{uart_8h_a13c465164f0c2216218d7da0258e48d9}{}\index{uart.\+h@{uart.\+h}!U\+A\+R\+T\+\_\+init@{U\+A\+R\+T\+\_\+init}}
+\index{U\+A\+R\+T\+\_\+init@{U\+A\+R\+T\+\_\+init}!uart.\+h@{uart.\+h}}
+\subsubsection[{U\+A\+R\+T\+\_\+init(int32\+\_\+t baud)}]{\setlength{\rightskip}{0pt plus 5cm}void U\+A\+R\+T\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{int32\+\_\+t}]{baud}
+\end{DoxyParamCaption}
+)}\label{uart_8h_a13c465164f0c2216218d7da0258e48d9}
+
+
+Init U\+A\+R\+T communication. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em baud} & -\/ Baud rate of communication \\
+\hline
+\end{DoxyParams}
+\hypertarget{uart_8h_ad504ca668c364504559276510be89804}{}\index{uart.\+h@{uart.\+h}!U\+A\+R\+T\+\_\+putchar@{U\+A\+R\+T\+\_\+putchar}}
+\index{U\+A\+R\+T\+\_\+putchar@{U\+A\+R\+T\+\_\+putchar}!uart.\+h@{uart.\+h}}
+\subsubsection[{U\+A\+R\+T\+\_\+putchar(char ch)}]{\setlength{\rightskip}{0pt plus 5cm}void U\+A\+R\+T\+\_\+putchar (
+\begin{DoxyParamCaption}
+\item[{char}]{ch}
+\end{DoxyParamCaption}
+)}\label{uart_8h_ad504ca668c364504559276510be89804}
+
+
+Send character. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ch} & -\/ Character to be sent \\
+\hline
+\end{DoxyParams}
+\hypertarget{uart_8h_a08642dd9033ce2393f734fc7d30cfc42}{}\index{uart.\+h@{uart.\+h}!U\+A\+R\+T\+\_\+putint@{U\+A\+R\+T\+\_\+putint}}
+\index{U\+A\+R\+T\+\_\+putint@{U\+A\+R\+T\+\_\+putint}!uart.\+h@{uart.\+h}}
+\subsubsection[{U\+A\+R\+T\+\_\+putint(int64\+\_\+t number)}]{\setlength{\rightskip}{0pt plus 5cm}void U\+A\+R\+T\+\_\+putint (
+\begin{DoxyParamCaption}
+\item[{int64\+\_\+t}]{number}
+\end{DoxyParamCaption}
+)}\label{uart_8h_a08642dd9033ce2393f734fc7d30cfc42}
+
+
+Send signed 64bit integer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em number} & -\/ Integer to be sent \\
+\hline
+\end{DoxyParams}
+\hypertarget{uart_8h_ac1f901fbcca65801964bd814a8798149}{}\index{uart.\+h@{uart.\+h}!U\+A\+R\+T\+\_\+putstr@{U\+A\+R\+T\+\_\+putstr}}
+\index{U\+A\+R\+T\+\_\+putstr@{U\+A\+R\+T\+\_\+putstr}!uart.\+h@{uart.\+h}}
+\subsubsection[{U\+A\+R\+T\+\_\+putstr(const char $\ast$str)}]{\setlength{\rightskip}{0pt plus 5cm}void U\+A\+R\+T\+\_\+putstr (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{str}
+\end{DoxyParamCaption}
+)}\label{uart_8h_ac1f901fbcca65801964bd814a8798149}
+
+
+Send string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & -\/ String to be sent \\
+\hline
+\end{DoxyParams}
+\hypertarget{uart_8h_a516bf0ade6009f72c9788e046120a03e}{}\index{uart.\+h@{uart.\+h}!U\+A\+R\+T\+\_\+putuint@{U\+A\+R\+T\+\_\+putuint}}
+\index{U\+A\+R\+T\+\_\+putuint@{U\+A\+R\+T\+\_\+putuint}!uart.\+h@{uart.\+h}}
+\subsubsection[{U\+A\+R\+T\+\_\+putuint(uint64\+\_\+t number)}]{\setlength{\rightskip}{0pt plus 5cm}void U\+A\+R\+T\+\_\+putuint (
+\begin{DoxyParamCaption}
+\item[{uint64\+\_\+t}]{number}
+\end{DoxyParamCaption}
+)}\label{uart_8h_a516bf0ade6009f72c9788e046120a03e}
+
+
+Send unsigned 64bit integer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em number} & -\/ Integer to be sent \\
+\hline
+\end{DoxyParams}

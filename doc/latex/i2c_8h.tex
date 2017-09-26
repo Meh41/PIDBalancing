@@ -1,0 +1,134 @@
+\hypertarget{i2c_8h}{}\section{i2c.\+h File Reference}
+\label{i2c_8h}\index{i2c.\+h@{i2c.\+h}}
+
+
+I2\+C Communication Module.  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{i2c_8h_a9536bf85bced4f4e549a82fb18eb6140}{}\#define {\bfseries I2\+C\+\_\+\+W\+R\+I\+T\+E}~0x00\label{i2c_8h_a9536bf85bced4f4e549a82fb18eb6140}
+
+\item 
+\hypertarget{i2c_8h_ab5c0fbe837494c5f9130a5914854250d}{}\#define {\bfseries I2\+C\+\_\+\+R\+E\+A\+D}~0x01\label{i2c_8h_ab5c0fbe837494c5f9130a5914854250d}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{i2c_8h_add274e7a1d239ae0f716717a568d9960}{I2\+C\+\_\+init} (uint32\+\_\+t frequency)
+\begin{DoxyCompactList}\small\item\em Initialize T\+W\+I. \end{DoxyCompactList}\item 
+int8\+\_\+t \hyperlink{i2c_8h_aa28801aed416cc9eadc617cb643657f8}{I2\+C\+\_\+start} (uint8\+\_\+t address)
+\begin{DoxyCompactList}\small\item\em Start communication to slave device. \end{DoxyCompactList}\item 
+void \hyperlink{i2c_8h_af6b4e1bf114a26416938dff94e24f3a5}{I2\+C\+\_\+stop} (void)
+\begin{DoxyCompactList}\small\item\em End communication. \end{DoxyCompactList}\item 
+int8\+\_\+t \hyperlink{i2c_8h_ab4f34db06b002444520e08af70359447}{I2\+C\+\_\+write} (uint8\+\_\+t data)
+\begin{DoxyCompactList}\small\item\em Write data. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{i2c_8h_a402468232c6bf15e7938550ade86331d}{I2\+C\+\_\+read\+Ack} (void)
+\begin{DoxyCompactList}\small\item\em Read acknowledged. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{i2c_8h_acd6a61ba113c1a939cff1f665d28ae39}{I2\+C\+\_\+read\+N\+Ack} (void)
+\begin{DoxyCompactList}\small\item\em Read data without acknowledged. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+I2\+C Communication Module. 
+
+
+
+\subsection{Function Documentation}
+\hypertarget{i2c_8h_add274e7a1d239ae0f716717a568d9960}{}\index{i2c.\+h@{i2c.\+h}!I2\+C\+\_\+init@{I2\+C\+\_\+init}}
+\index{I2\+C\+\_\+init@{I2\+C\+\_\+init}!i2c.\+h@{i2c.\+h}}
+\subsubsection[{I2\+C\+\_\+init(uint32\+\_\+t frequency)}]{\setlength{\rightskip}{0pt plus 5cm}void I2\+C\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{frequency}
+\end{DoxyParamCaption}
+)}\label{i2c_8h_add274e7a1d239ae0f716717a568d9960}
+
+
+Initialize T\+W\+I. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em frequency} & -\/ Frequency of I2\+C \\
+\hline
+\end{DoxyParams}
+\hypertarget{i2c_8h_a402468232c6bf15e7938550ade86331d}{}\index{i2c.\+h@{i2c.\+h}!I2\+C\+\_\+read\+Ack@{I2\+C\+\_\+read\+Ack}}
+\index{I2\+C\+\_\+read\+Ack@{I2\+C\+\_\+read\+Ack}!i2c.\+h@{i2c.\+h}}
+\subsubsection[{I2\+C\+\_\+read\+Ack(void)}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t I2\+C\+\_\+read\+Ack (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{i2c_8h_a402468232c6bf15e7938550ade86331d}
+
+
+Read acknowledged. 
+
+\begin{DoxyReturn}{Returns}
+Readed data (acknowledged) 
+\end{DoxyReturn}
+\hypertarget{i2c_8h_acd6a61ba113c1a939cff1f665d28ae39}{}\index{i2c.\+h@{i2c.\+h}!I2\+C\+\_\+read\+N\+Ack@{I2\+C\+\_\+read\+N\+Ack}}
+\index{I2\+C\+\_\+read\+N\+Ack@{I2\+C\+\_\+read\+N\+Ack}!i2c.\+h@{i2c.\+h}}
+\subsubsection[{I2\+C\+\_\+read\+N\+Ack(void)}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t I2\+C\+\_\+read\+N\+Ack (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{i2c_8h_acd6a61ba113c1a939cff1f665d28ae39}
+
+
+Read data without acknowledged. 
+
+\begin{DoxyReturn}{Returns}
+Readed data 
+\end{DoxyReturn}
+\hypertarget{i2c_8h_aa28801aed416cc9eadc617cb643657f8}{}\index{i2c.\+h@{i2c.\+h}!I2\+C\+\_\+start@{I2\+C\+\_\+start}}
+\index{I2\+C\+\_\+start@{I2\+C\+\_\+start}!i2c.\+h@{i2c.\+h}}
+\subsubsection[{I2\+C\+\_\+start(uint8\+\_\+t address)}]{\setlength{\rightskip}{0pt plus 5cm}int8\+\_\+t I2\+C\+\_\+start (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{address}
+\end{DoxyParamCaption}
+)}\label{i2c_8h_aa28801aed416cc9eadc617cb643657f8}
+
+
+Start communication to slave device. 
+
+Send start signal
+
+
+\begin{DoxyParams}{Parameters}
+{\em address} & -\/ Address of slave device (included write or read bit) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if no error or negative number if error occure 
+\end{DoxyReturn}
+\hypertarget{i2c_8h_af6b4e1bf114a26416938dff94e24f3a5}{}\index{i2c.\+h@{i2c.\+h}!I2\+C\+\_\+stop@{I2\+C\+\_\+stop}}
+\index{I2\+C\+\_\+stop@{I2\+C\+\_\+stop}!i2c.\+h@{i2c.\+h}}
+\subsubsection[{I2\+C\+\_\+stop(void)}]{\setlength{\rightskip}{0pt plus 5cm}void I2\+C\+\_\+stop (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{i2c_8h_af6b4e1bf114a26416938dff94e24f3a5}
+
+
+End communication. 
+
+Send stop signal \hypertarget{i2c_8h_ab4f34db06b002444520e08af70359447}{}\index{i2c.\+h@{i2c.\+h}!I2\+C\+\_\+write@{I2\+C\+\_\+write}}
+\index{I2\+C\+\_\+write@{I2\+C\+\_\+write}!i2c.\+h@{i2c.\+h}}
+\subsubsection[{I2\+C\+\_\+write(uint8\+\_\+t data)}]{\setlength{\rightskip}{0pt plus 5cm}int8\+\_\+t I2\+C\+\_\+write (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{data}
+\end{DoxyParamCaption}
+)}\label{i2c_8h_ab4f34db06b002444520e08af70359447}
+
+
+Write data. 
+
+Write data to bus
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & -\/ Data to be writen on bus \\
+\hline
+\end{DoxyParams}

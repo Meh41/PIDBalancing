@@ -1,3 +1,8 @@
+/**
+ * @file i2c.h
+ * @brief I2C Communication Module
+ */
+
 #ifndef _I2C_H_
 #define _I2C_H_
 

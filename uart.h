@@ -1,3 +1,8 @@
+/**
+ * @file uart.h
+ * @brief UART Communication Module
+ */
+
 #ifndef _UART_H_
 #define _UART_H_
 
