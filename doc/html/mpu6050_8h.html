@@ -1056,6 +1056,9 @@ Functions</h2></td></tr>
 <tr class="memitem:af9a66fbe63f84285838b7c7be7eec180"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mpu6050_8h.html#af9a66fbe63f84285838b7c7be7eec180">MPU6050_writeBit</a> (uint8_t address, uint8_t bit, uint8_t data)</td></tr>
 <tr class="memdesc:af9a66fbe63f84285838b7c7be7eec180"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write bit to device register.  <a href="#af9a66fbe63f84285838b7c7be7eec180">More...</a><br /></td></tr>
 <tr class="separator:af9a66fbe63f84285838b7c7be7eec180"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6de4cc94058b3ba28f329c6a6a1f5cde"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mpu6050_8h.html#a6de4cc94058b3ba28f329c6a6a1f5cde">MPU6050_writeBits</a> (uint8_t address, uint8_t startBit, uint8_t length, uint8_t data)</td></tr>
+<tr class="memdesc:a6de4cc94058b3ba28f329c6a6a1f5cde"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write bit to device register.  <a href="#a6de4cc94058b3ba28f329c6a6a1f5cde">More...</a><br /></td></tr>
+<tr class="separator:a6de4cc94058b3ba28f329c6a6a1f5cde"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59160930a3a177c7203706995dd3ad31"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mpu6050_8h.html#a59160930a3a177c7203706995dd3ad31">MPU6050_readBit</a> (uint8_t address, uint8_t bit)</td></tr>
 <tr class="memdesc:a59160930a3a177c7203706995dd3ad31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read bit from device register.  <a href="#a59160930a3a177c7203706995dd3ad31">More...</a><br /></td></tr>
 <tr class="separator:a59160930a3a177c7203706995dd3ad31"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1233,6 +1236,57 @@ Functions</h2></td></tr>
     <tr><td class="paramname">address</td><td>- Address of register </td></tr>
     <tr><td class="paramname">bit</td><td>- Bit position in register </td></tr>
     <tr><td class="paramname">data</td><td>- 0 for set bit to 0 or &gt;0 to set bit to 1 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if no error or negative number if error occure </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a6de4cc94058b3ba28f329c6a6a1f5cde"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int8_t MPU6050_writeBits </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>address</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>startBit</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>length</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Write bit to device register. </p>
+<p>Write bit to device register</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">address</td><td>- Address of register </td></tr>
+    <tr><td class="paramname">bitStart</td><td>- Start bits in register (from right to left) </td></tr>
+    <tr><td class="paramname">legth</td><td>- Count of bits to be writen </td></tr>
+    <tr><td class="paramname">data</td><td>- Data to bi writen in bits </td></tr>
   </table>
   </dd>
 </dl>

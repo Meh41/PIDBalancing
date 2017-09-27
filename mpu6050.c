@@ -5,6 +5,7 @@
 #include "i2c.h"
 
 static uint8_t MPU6050_address = MPU6050_DEFAULT_ADDRESS << 1;
+static volatile uint8_t buffer[15];
 
 int8_t MPU6050_init(uint8_t address)
 {
@@ -78,4 +79,27 @@ int8_t MPU6050_readBit(uint8_t address, uint8_t bit)
         return -1;
 
     return (byte >> bit) & 0x01;
+}
+
+int8_t MPU6050_writeBits(uint8_t address, uint8_t startBit, uint8_t length, uint8_t data)
+{
+    if(length < 0)
+        return 0;
+
+    uint8_t byte;
+    if(MPU6050_readBytes(address, &byte, 1) < 0)
+        return -1;
+
+    uint8_t mask = (1 << length) - 1;
+    mask <<= (startBit - length + 1);
+    data <<= (startBit - length + 1);
+    data &= mask;
+    byte &= ~(mask);
+    byte |= data;
+
+    _delay_ms(10);
+    if(MPU6050_writeBytes(address, &byte, 1) < 0)
+        return -2;
+
+    return 0;
 }

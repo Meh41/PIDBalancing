@@ -423,6 +423,20 @@ int8_t MPU6050_writeBit(uint8_t address, uint8_t bit, uint8_t data);
 
 /**
  * @brief
+ *  Write bit to device register
+ *
+ * Write bit to device register
+ *
+ * @param address - Address of register
+ * @param bitStart - Start bits in register (from right to left)
+ * @param legth - Count of bits to be writen
+ * @param data - Data to bi writen in bits
+ * @return 0 if no error or negative number if error occure
+ */
+int8_t MPU6050_writeBits(uint8_t address, uint8_t startBit, uint8_t length, uint8_t data);
+
+/**
+ * @brief
  *  Read bit from device register
  *
  * Read bit from device register

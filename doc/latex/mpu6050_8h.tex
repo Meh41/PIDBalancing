@@ -964,6 +964,8 @@ int8\+\_\+t \hyperlink{mpu6050_8h_a6af8a55fe29a3c4b1532212d0b91ed3f}{M\+P\+U6050
 \begin{DoxyCompactList}\small\item\em Read bytes to device. \end{DoxyCompactList}\item 
 int8\+\_\+t \hyperlink{mpu6050_8h_af9a66fbe63f84285838b7c7be7eec180}{M\+P\+U6050\+\_\+write\+Bit} (uint8\+\_\+t address, uint8\+\_\+t bit, uint8\+\_\+t data)
 \begin{DoxyCompactList}\small\item\em Write bit to device register. \end{DoxyCompactList}\item 
+int8\+\_\+t \hyperlink{mpu6050_8h_a6de4cc94058b3ba28f329c6a6a1f5cde}{M\+P\+U6050\+\_\+write\+Bits} (uint8\+\_\+t address, uint8\+\_\+t start\+Bit, uint8\+\_\+t length, uint8\+\_\+t data)
+\begin{DoxyCompactList}\small\item\em Write bit to device register. \end{DoxyCompactList}\item 
 int8\+\_\+t \hyperlink{mpu6050_8h_a59160930a3a177c7203706995dd3ad31}{M\+P\+U6050\+\_\+read\+Bit} (uint8\+\_\+t address, uint8\+\_\+t bit)
 \begin{DoxyCompactList}\small\item\em Read bit from device register. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -1089,6 +1091,36 @@ Write bit to device register
 {\em bit} & -\/ Bit position in register \\
 \hline
 {\em data} & -\/ 0 for set bit to 0 or $>$0 to set bit to 1 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if no error or negative number if error occure 
+\end{DoxyReturn}
+\hypertarget{mpu6050_8h_a6de4cc94058b3ba28f329c6a6a1f5cde}{}\index{mpu6050.\+h@{mpu6050.\+h}!M\+P\+U6050\+\_\+write\+Bits@{M\+P\+U6050\+\_\+write\+Bits}}
+\index{M\+P\+U6050\+\_\+write\+Bits@{M\+P\+U6050\+\_\+write\+Bits}!mpu6050.\+h@{mpu6050.\+h}}
+\subsubsection[{M\+P\+U6050\+\_\+write\+Bits(uint8\+\_\+t address, uint8\+\_\+t start\+Bit, uint8\+\_\+t length, uint8\+\_\+t data)}]{\setlength{\rightskip}{0pt plus 5cm}int8\+\_\+t M\+P\+U6050\+\_\+write\+Bits (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{address, }
+\item[{uint8\+\_\+t}]{start\+Bit, }
+\item[{uint8\+\_\+t}]{length, }
+\item[{uint8\+\_\+t}]{data}
+\end{DoxyParamCaption}
+)}\label{mpu6050_8h_a6de4cc94058b3ba28f329c6a6a1f5cde}
+
+
+Write bit to device register. 
+
+Write bit to device register
+
+
+\begin{DoxyParams}{Parameters}
+{\em address} & -\/ Address of register \\
+\hline
+{\em bit\+Start} & -\/ Start bits in register (from right to left) \\
+\hline
+{\em legth} & -\/ Count of bits to be writen \\
+\hline
+{\em data} & -\/ Data to bi writen in bits \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
