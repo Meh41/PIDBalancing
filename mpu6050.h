@@ -372,6 +372,36 @@
 
 /**
  * @brief
+ *  Struct to hold raw data
+ *
+ * Holding raw data from MPU6050 gyro and accelometer
+ */
+typedef struct {
+    int16_t ax; ///< Accelometer X
+    int16_t ay; ///< Accelometer Y
+    int16_t az; ///< Accelometer Z
+    int16_t gx; ///< Gyroscope X
+    int16_t gy; ///< Gyroscope Y
+    int16_t gz; ///< Gyroscope Z
+} mpu6050_raw_t;
+
+/**
+ * @brief
+ *  Struct to hold real world data
+ *
+ * Holding real world data from MPU6050 gyro and accelometer
+ */
+typedef struct {
+    double ax; ///< Accelometer X
+    double ay; ///< Accelometer Y
+    double az; ///< Accelometer Z
+    double gx; ///< Gyroscope X
+    double gy; ///< Gyroscope Y
+    double gz; ///< Gyroscope Z
+} mpu6050_real_t;
+
+/**
+ * @brief
  *  Initialization of MPU6050 module
  *
  * Set device address and turn off sleep mode

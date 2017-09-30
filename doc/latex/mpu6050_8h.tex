@@ -6,6 +6,13 @@ M\+P\+U6050 module.
 
 
 {\ttfamily \#include $<$stdint.\+h$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structmpu6050__raw__t}{mpu6050\+\_\+raw\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Struct to hold raw data. \end{DoxyCompactList}\item 
+struct \hyperlink{structmpu6050__real__t}{mpu6050\+\_\+real\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Struct to hold real world data. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
@@ -950,6 +957,30 @@ M\+P\+U6050 module.
 \item 
 \hypertarget{mpu6050_8h_a49306862a4b9c8f26329221fad9546f5}{}\#define {\bfseries M\+P\+U6050\+\_\+\+D\+M\+P\+\_\+\+M\+E\+M\+O\+R\+Y\+\_\+\+C\+H\+U\+N\+K\+\_\+\+S\+I\+Z\+E}~16\label{mpu6050_8h_a49306862a4b9c8f26329221fad9546f5}
 
+\item 
+\hypertarget{mpu6050_8h_a2a6431e0d611cd160d678c51123ec848}{}\#define {\bfseries M\+P\+U6050\+\_\+\+G\+Y\+R\+O\+\_\+\+L\+S\+B\+\_\+250}~131.\+0\label{mpu6050_8h_a2a6431e0d611cd160d678c51123ec848}
+
+\item 
+\hypertarget{mpu6050_8h_ac5768a3ca41751b3bb85d3a4cfcef8d9}{}\#define {\bfseries M\+P\+U6050\+\_\+\+G\+Y\+R\+O\+\_\+\+L\+S\+B\+\_\+500}~65.\+5\label{mpu6050_8h_ac5768a3ca41751b3bb85d3a4cfcef8d9}
+
+\item 
+\hypertarget{mpu6050_8h_a8c733eb1a116d6345c5a04315a2a1d63}{}\#define {\bfseries M\+P\+U6050\+\_\+\+G\+Y\+R\+O\+\_\+\+L\+S\+B\+\_\+1000}~32.\+8\label{mpu6050_8h_a8c733eb1a116d6345c5a04315a2a1d63}
+
+\item 
+\hypertarget{mpu6050_8h_a8ab04e185bb00f18783d6003ae62cee3}{}\#define {\bfseries M\+P\+U6050\+\_\+\+G\+Y\+R\+O\+\_\+\+L\+S\+B\+\_\+2000}~16.\+4\label{mpu6050_8h_a8ab04e185bb00f18783d6003ae62cee3}
+
+\item 
+\hypertarget{mpu6050_8h_ad3896d6585621a949f32fe7d33d91f93}{}\#define {\bfseries M\+P\+U6050\+\_\+\+A\+C\+C\+E\+L\+\_\+\+L\+S\+B\+\_\+2}~16384.\+0\label{mpu6050_8h_ad3896d6585621a949f32fe7d33d91f93}
+
+\item 
+\hypertarget{mpu6050_8h_aaffa976848bb71fba179d765d16f1140}{}\#define {\bfseries M\+P\+U6050\+\_\+\+A\+C\+C\+E\+L\+\_\+\+L\+S\+B\+\_\+4}~8192.\+0\label{mpu6050_8h_aaffa976848bb71fba179d765d16f1140}
+
+\item 
+\hypertarget{mpu6050_8h_aba5c34f9526fbbccef16c9d9e2068baa}{}\#define {\bfseries M\+P\+U6050\+\_\+\+A\+C\+C\+E\+L\+\_\+\+L\+S\+B\+\_\+8}~4096.\+0\label{mpu6050_8h_aba5c34f9526fbbccef16c9d9e2068baa}
+
+\item 
+\hypertarget{mpu6050_8h_aabaa17e084ec0c49c6e9ad6e1cad2b91}{}\#define {\bfseries M\+P\+U6050\+\_\+\+A\+C\+C\+E\+L\+\_\+\+L\+S\+B\+\_\+16}~2048.\+0\label{mpu6050_8h_aabaa17e084ec0c49c6e9ad6e1cad2b91}
+
 \end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
@@ -962,12 +993,18 @@ int8\+\_\+t \hyperlink{mpu6050_8h_a871818b85e3a0b5e8e69b9110ef8ab87}{M\+P\+U6050
 \begin{DoxyCompactList}\small\item\em Write bytes to device. \end{DoxyCompactList}\item 
 int8\+\_\+t \hyperlink{mpu6050_8h_a6af8a55fe29a3c4b1532212d0b91ed3f}{M\+P\+U6050\+\_\+read\+Bytes} (uint8\+\_\+t address, uint8\+\_\+t $\ast$data, uint16\+\_\+t length)
 \begin{DoxyCompactList}\small\item\em Read bytes to device. \end{DoxyCompactList}\item 
+int8\+\_\+t \hyperlink{mpu6050_8h_aa15003c1d7c8238f02bca8616b398217}{M\+P\+U6050\+\_\+write\+Byte} (uint8\+\_\+t address, uint8\+\_\+t data)
+\begin{DoxyCompactList}\small\item\em Write byte to device. \end{DoxyCompactList}\item 
+int8\+\_\+t \hyperlink{mpu6050_8h_aa2d45f24e842b70b4ee89108a35546f0}{M\+P\+U6050\+\_\+read\+Byte} (uint8\+\_\+t address, uint8\+\_\+t $\ast$data)
+\begin{DoxyCompactList}\small\item\em Read byte to device. \end{DoxyCompactList}\item 
 int8\+\_\+t \hyperlink{mpu6050_8h_af9a66fbe63f84285838b7c7be7eec180}{M\+P\+U6050\+\_\+write\+Bit} (uint8\+\_\+t address, uint8\+\_\+t bit, uint8\+\_\+t data)
 \begin{DoxyCompactList}\small\item\em Write bit to device register. \end{DoxyCompactList}\item 
 int8\+\_\+t \hyperlink{mpu6050_8h_a6de4cc94058b3ba28f329c6a6a1f5cde}{M\+P\+U6050\+\_\+write\+Bits} (uint8\+\_\+t address, uint8\+\_\+t start\+Bit, uint8\+\_\+t length, uint8\+\_\+t data)
-\begin{DoxyCompactList}\small\item\em Write bit to device register. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Write bits to device register. \end{DoxyCompactList}\item 
 int8\+\_\+t \hyperlink{mpu6050_8h_a59160930a3a177c7203706995dd3ad31}{M\+P\+U6050\+\_\+read\+Bit} (uint8\+\_\+t address, uint8\+\_\+t bit)
-\begin{DoxyCompactList}\small\item\em Read bit from device register. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Read bit from device register. \end{DoxyCompactList}\item 
+int8\+\_\+t \hyperlink{mpu6050_8h_a5ba65cad8bf2202ddb79d76de8543a75}{M\+P\+U6050\+\_\+read\+Bits} (uint8\+\_\+t address, uint8\+\_\+t start\+Bit, uint8\+\_\+t length, uint8\+\_\+t $\ast$data)
+\begin{DoxyCompactList}\small\item\em Read bits to device register. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -1020,6 +1057,60 @@ Read bit from device register
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 0 if bit value is 0, 1 if bit value is 1 or negative number if error occure 
+\end{DoxyReturn}
+\hypertarget{mpu6050_8h_a5ba65cad8bf2202ddb79d76de8543a75}{}\index{mpu6050.\+h@{mpu6050.\+h}!M\+P\+U6050\+\_\+read\+Bits@{M\+P\+U6050\+\_\+read\+Bits}}
+\index{M\+P\+U6050\+\_\+read\+Bits@{M\+P\+U6050\+\_\+read\+Bits}!mpu6050.\+h@{mpu6050.\+h}}
+\subsubsection[{M\+P\+U6050\+\_\+read\+Bits(uint8\+\_\+t address, uint8\+\_\+t start\+Bit, uint8\+\_\+t length, uint8\+\_\+t $\ast$data)}]{\setlength{\rightskip}{0pt plus 5cm}int8\+\_\+t M\+P\+U6050\+\_\+read\+Bits (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{address, }
+\item[{uint8\+\_\+t}]{start\+Bit, }
+\item[{uint8\+\_\+t}]{length, }
+\item[{uint8\+\_\+t $\ast$}]{data}
+\end{DoxyParamCaption}
+)}\label{mpu6050_8h_a5ba65cad8bf2202ddb79d76de8543a75}
+
+
+Read bits to device register. 
+
+Read bits to device register
+
+
+\begin{DoxyParams}{Parameters}
+{\em address} & -\/ Address of register \\
+\hline
+{\em bit\+Start} & -\/ Start bit in register (from right to left) \\
+\hline
+{\em legth} & -\/ Count of bits to be read \\
+\hline
+{\em data} & -\/ Addres to store readed data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if no error or negative number if error occure 
+\end{DoxyReturn}
+\hypertarget{mpu6050_8h_aa2d45f24e842b70b4ee89108a35546f0}{}\index{mpu6050.\+h@{mpu6050.\+h}!M\+P\+U6050\+\_\+read\+Byte@{M\+P\+U6050\+\_\+read\+Byte}}
+\index{M\+P\+U6050\+\_\+read\+Byte@{M\+P\+U6050\+\_\+read\+Byte}!mpu6050.\+h@{mpu6050.\+h}}
+\subsubsection[{M\+P\+U6050\+\_\+read\+Byte(uint8\+\_\+t address, uint8\+\_\+t $\ast$data)}]{\setlength{\rightskip}{0pt plus 5cm}int8\+\_\+t M\+P\+U6050\+\_\+read\+Byte (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{address, }
+\item[{uint8\+\_\+t $\ast$}]{data}
+\end{DoxyParamCaption}
+)}\label{mpu6050_8h_aa2d45f24e842b70b4ee89108a35546f0}
+
+
+Read byte to device. 
+
+Read data byte from device memmory
+
+
+\begin{DoxyParams}{Parameters}
+{\em address} & -\/ Start address \\
+\hline
+{\em data} & -\/ Memmory buffer to hold readed data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if no error or negative number if error occure 
 \end{DoxyReturn}
 \hypertarget{mpu6050_8h_a6af8a55fe29a3c4b1532212d0b91ed3f}{}\index{mpu6050.\+h@{mpu6050.\+h}!M\+P\+U6050\+\_\+read\+Bytes@{M\+P\+U6050\+\_\+read\+Bytes}}
 \index{M\+P\+U6050\+\_\+read\+Bytes@{M\+P\+U6050\+\_\+read\+Bytes}!mpu6050.\+h@{mpu6050.\+h}}
@@ -1108,19 +1199,43 @@ Write bit to device register
 )}\label{mpu6050_8h_a6de4cc94058b3ba28f329c6a6a1f5cde}
 
 
-Write bit to device register. 
+Write bits to device register. 
 
-Write bit to device register
+Write bits to device register
 
 
 \begin{DoxyParams}{Parameters}
 {\em address} & -\/ Address of register \\
 \hline
-{\em bit\+Start} & -\/ Start bits in register (from right to left) \\
+{\em bit\+Start} & -\/ Start bit in register (from right to left) \\
 \hline
 {\em legth} & -\/ Count of bits to be writen \\
 \hline
 {\em data} & -\/ Data to bi writen in bits \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if no error or negative number if error occure 
+\end{DoxyReturn}
+\hypertarget{mpu6050_8h_aa15003c1d7c8238f02bca8616b398217}{}\index{mpu6050.\+h@{mpu6050.\+h}!M\+P\+U6050\+\_\+write\+Byte@{M\+P\+U6050\+\_\+write\+Byte}}
+\index{M\+P\+U6050\+\_\+write\+Byte@{M\+P\+U6050\+\_\+write\+Byte}!mpu6050.\+h@{mpu6050.\+h}}
+\subsubsection[{M\+P\+U6050\+\_\+write\+Byte(uint8\+\_\+t address, uint8\+\_\+t data)}]{\setlength{\rightskip}{0pt plus 5cm}int8\+\_\+t M\+P\+U6050\+\_\+write\+Byte (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{address, }
+\item[{uint8\+\_\+t}]{data}
+\end{DoxyParamCaption}
+)}\label{mpu6050_8h_aa15003c1d7c8238f02bca8616b398217}
+
+
+Write byte to device. 
+
+Write data byte to device memmory
+
+
+\begin{DoxyParams}{Parameters}
+{\em address} & -\/ Start address \\
+\hline
+{\em data} & -\/ Data to be writen \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
