@@ -20,6 +20,14 @@ int main(void)
     UART_putstr("###############\n\n");
 
     _delay_ms(100);
+
+    uint8_t byte = 0;
+    UART_putint(MPU6050_writeBits(MPU6050_RA_ZG_OFFS_TC, MPU6050_TC_OFFSET_BIT, MPU6050_TC_OFFSET_LENGTH, 103));
+    _delay_ms(100);
+    UART_putint(MPU6050_readBits(MPU6050_RA_ZG_OFFS_TC, MPU6050_TC_OFFSET_BIT, MPU6050_TC_OFFSET_LENGTH, &byte));
+    UART_putuint(byte);
+
+    while(1);
     while(1)
     {
         uint8_t byte;

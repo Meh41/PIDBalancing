@@ -358,6 +358,16 @@
 #define MPU6050_DMP_MEMORY_BANK_SIZE    256
 #define MPU6050_DMP_MEMORY_CHUNK_SIZE   16
 
+#define MPU6050_GYRO_LSB_250 131.0
+#define MPU6050_GYRO_LSB_500 65.5
+#define MPU6050_GYRO_LSB_1000 32.8
+#define MPU6050_GYRO_LSB_2000 16.4
+
+#define MPU6050_ACCEL_LSB_2 16384.0
+#define MPU6050_ACCEL_LSB_4 8192.0
+#define MPU6050_ACCEL_LSB_8 4096.0
+#define MPU6050_ACCEL_LSB_16 2048.0
+
 #include <stdint.h>
 
 /**
@@ -410,6 +420,30 @@ int8_t MPU6050_readBytes(uint8_t address, uint8_t *data, uint16_t length);
 
 /**
  * @brief
+ *  Write byte to device
+ *
+ * Write data byte to device memmory
+ *
+ * @param address - Start address
+ * @param data - Data to be writen
+ * @return 0 if no error or negative number if error occure
+ */
+int8_t MPU6050_writeByte(uint8_t address, uint8_t data);
+
+/**
+ * @brief
+ *  Read byte to device
+ *
+ * Read data byte from device memmory
+ *
+ * @param address - Start address
+ * @param data - Memmory buffer to hold readed data
+ * @return 0 if no error or negative number if error occure
+ */
+int8_t MPU6050_readByte(uint8_t address, uint8_t *data);
+
+/**
+ * @brief
  *  Write bit to device register
  *
  * Write bit to device register
@@ -423,12 +457,12 @@ int8_t MPU6050_writeBit(uint8_t address, uint8_t bit, uint8_t data);
 
 /**
  * @brief
- *  Write bit to device register
+ *  Write bits to device register
  *
- * Write bit to device register
+ * Write bits to device register
  *
  * @param address - Address of register
- * @param bitStart - Start bits in register (from right to left)
+ * @param bitStart - Start bit in register (from right to left)
  * @param legth - Count of bits to be writen
  * @param data - Data to bi writen in bits
  * @return 0 if no error or negative number if error occure
@@ -446,5 +480,19 @@ int8_t MPU6050_writeBits(uint8_t address, uint8_t startBit, uint8_t length, uint
  * @return 0 if bit value is 0, 1 if bit value is 1 or negative number if error occure
  */
 int8_t MPU6050_readBit(uint8_t address, uint8_t bit);
+
+/**
+ * @brief
+ *  Read bits to device register
+ *
+ * Read bits to device register
+ *
+ * @param address - Address of register
+ * @param bitStart - Start bit in register (from right to left)
+ * @param legth - Count of bits to be read
+ * @param data - Addres to store readed data
+ * @return 0 if no error or negative number if error occure
+ */
+int8_t MPU6050_readBits(uint8_t address, uint8_t startBit, uint8_t length, uint8_t *data);
 
 #endif // _MPU6050_H_
